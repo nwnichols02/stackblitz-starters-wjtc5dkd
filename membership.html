@@ -1,394 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Explore ABC Fitness Studio membership plans and class passes. Find the perfect option for your fitness journey."
-    />
-    <title>Membership & Class Passes - ABC Fitness Studio</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="header-container">
-        <a href="index.html" class="logo">
-          <span class="logo-accent">ABC</span>
-          <span class="logo-text">Fitness Studio</span>
-        </a>
 
-        <button
-          class="nav-toggle"
-          id="nav-toggle"
-          aria-expanded="false"
-          aria-controls="main-nav"
-          aria-label="Toggle navigation menu"
-        >
-          <span class="nav-toggle-icon"></span>
-        </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Explore ABC Fitness Studio membership plans and class passes. Find the perfect option for your fitness journey." />
+  <title>Membership & Class Passes - ABC Fitness Studio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
-          <ul class="nav-list">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-            <li><a href="about.html" class="nav-link">About</a></li>
-            <li>
-              <a href="membership.html" class="nav-link nav-link--active"
-                >Membership</a
-              >
-            </li>
-            <li>
-              <button
-                class="btn-cart"
-                id="open-cart"
-                aria-label="View shopping cart"
-              >
-                View Cart <span class="cart-badge" id="cart-badge">0</span>
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.png" alt="ABC Fitness Studio Logo" class="logo-image" />
+        <span class="logo-accent">ABC</span>
+        <span class="logo-text">Fitness Studio</span>
+      </a>
 
-    <main>
-      <section class="page-hero">
-        <div class="container">
-          <h1>Memberships & Class Passes</h1>
-          <p>Flexible options to fit your lifestyle and fitness goals.</p>
-        </div>
-      </section>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav"
+        aria-label="Toggle navigation menu">
+        <span class="nav-toggle-icon"></span>
+      </button>
 
-      <section class="section membership-intro">
-        <div class="container">
-          <div style="max-width: 800px; margin: 0 auto; text-align: center">
-            <h2>Invest in Your Wellness</h2>
-            <p>
-              Whether you're a fitness enthusiast or just getting started, we
-              have a plan that's right for you. Our memberships offer unlimited
-              access to all classes, while class passes provide flexibility for
-              those with busy schedules.
-            </p>
-            <p>
-              <strong>Why choose a membership over drop-ins?</strong> Members
-              save up to 50% compared to drop-in rates, get priority booking,
-              access to member-only events, and discounts on equipment
-              purchases.
-            </p>
-          </div>
-        </div>
-      </section>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li>
+            <a href="membership.html" class="nav-link nav-link--active">Membership</a>
+          </li>
+          <li>
+            <button class="btn-cart" id="open-cart" aria-label="View shopping cart">
+              View Cart <span class="cart-badge" id="cart-badge">0</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-      <section class="section section-alt" id="plans">
-        <div class="container">
-          <h2 class="text-center">Choose Your Plan</h2>
-          <p class="text-center">
-            All plans include access to our full class schedule and studio
-            amenities.
-          </p>
-
-          <div class="membership-grid">
-            <article class="card membership-card featured">
-              <h3 class="membership-name">Monthly Unlimited</h3>
-              <p class="membership-price">$99<span>/month</span></p>
-              <ul class="membership-features">
-                <li>Unlimited classes</li>
-                <li>Priority class booking</li>
-                <li>10% equipment discount</li>
-                <li>Free guest pass per month</li>
-                <li>Access to member events</li>
-                <li>Cancel anytime</li>
-              </ul>
-              <button
-                class="btn btn-primary btn-add-cart"
-                data-item-id="monthly-unlimited"
-                data-name="Monthly Unlimited Membership"
-                data-price="99"
-                data-type="membership"
-              >
-                Add to Cart
-              </button>
-            </article>
-
-            <article class="card membership-card">
-              <h3 class="membership-name">10-Class Pass</h3>
-              <p class="membership-price">$120<span>/10 classes</span></p>
-              <ul class="membership-features">
-                <li>10 classes of your choice</li>
-                <li>Valid for 3 months</li>
-                <li>Mix and match classes</li>
-                <li>5% equipment discount</li>
-                <li>No commitment</li>
-                <li>Shareable with family</li>
-              </ul>
-              <button
-                class="btn btn-primary btn-add-cart"
-                data-item-id="10-class-pass"
-                data-name="10-Class Pass"
-                data-price="120"
-                data-type="membership"
-              >
-                Add to Cart
-              </button>
-            </article>
-
-            <article class="card membership-card">
-              <h3 class="membership-name">Weekend Warrior</h3>
-              <p class="membership-price">$59<span>/month</span></p>
-              <ul class="membership-features">
-                <li>Unlimited weekend classes</li>
-                <li>Saturday & Sunday access</li>
-                <li>5% equipment discount</li>
-                <li>Perfect for busy schedules</li>
-                <li>Cancel anytime</li>
-                <li>Great value option</li>
-              </ul>
-              <button
-                class="btn btn-primary btn-add-cart"
-                data-item-id="weekend-warrior"
-                data-name="Weekend Warrior Membership"
-                data-price="59"
-                data-type="membership"
-              >
-                Add to Cart
-              </button>
-            </article>
-
-            <article class="card membership-card">
-              <h3 class="membership-name">Student Plan</h3>
-              <p class="membership-price">$69<span>/month</span></p>
-              <ul class="membership-features">
-                <li>Unlimited classes</li>
-                <li>Valid student ID required</li>
-                <li>30% off regular price</li>
-                <li>Priority booking</li>
-                <li>5% equipment discount</li>
-                <li>Ages 16-25</li>
-              </ul>
-              <button
-                class="btn btn-primary btn-add-cart"
-                data-item-id="student-plan"
-                data-name="Student Plan Membership"
-                data-price="69"
-                data-type="membership"
-              >
-                Add to Cart
-              </button>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="faq">
-        <div class="container">
-          <h2 class="text-center">Frequently Asked Questions</h2>
-          <p class="text-center">
-            Find answers to common questions about our memberships and policies.
-          </p>
-
-          <div class="faq-list">
-            <details class="faq-item">
-              <summary>How do I sign up for a membership?</summary>
-              <p>
-                You can sign up online by adding your desired plan to your cart
-                and completing the checkout process. Alternatively, visit us
-                in-studio during business hours and our staff will help you get
-                started. All new members receive a complimentary orientation
-                session.
-              </p>
-            </details>
-
-            <details class="faq-item">
-              <summary>Can I cancel my membership anytime?</summary>
-              <p>
-                Yes! All our monthly memberships are commitment-free. You can
-                cancel anytime by notifying us at least 7 days before your next
-                billing date. There are no cancellation fees or penalties. We
-                want you to stay because you love it, not because you're locked
-                in.
-              </p>
-            </details>
-
-            <details class="faq-item">
-              <summary>Can I freeze my membership?</summary>
-              <p>
-                Absolutely! Life happens, and we understand. You can freeze your
-                membership for up to 3 months per year for travel, injury, or
-                other reasons. Just let us know at least 5 days before your
-                billing date. There's no fee to freeze your account.
-              </p>
-            </details>
-
-            <details class="faq-item">
-              <summary>
-                What's the difference between memberships and class passes?
-              </summary>
-              <p>
-                Memberships offer unlimited access and renew monthly, making
-                them ideal for regular attendees. Class passes provide a set
-                number of classes with an expiration date, perfect for those who
-                prefer flexibility. Members also get additional perks like
-                priority booking and equipment discounts.
-              </p>
-            </details>
-
-            <details class="faq-item">
-              <summary>Do class passes expire?</summary>
-              <p>
-                Yes, the 10-Class Pass is valid for 3 months from the date of
-                purchase. We recommend this option if you plan to attend at
-                least 3-4 classes per month. If you need more time, contact
-                us—we're happy to work with you on extensions for valid reasons.
-              </p>
-            </details>
-
-            <details class="faq-item">
-              <summary>Can I share my membership with family members?</summary>
-              <p>
-                Monthly memberships are individual and non-transferable.
-                However, the 10-Class Pass can be shared among immediate family
-                members living in the same household. Each person using the pass
-                must be registered in our system for safety reasons.
-              </p>
-            </details>
-
-            <details class="faq-item">
-              <summary>What should I bring to my first class?</summary>
-              <p>
-                Bring comfortable workout clothing, a water bottle, and a
-                positive attitude! We provide all necessary equipment including
-                yoga mats, weights, and props. For Pilates reformer classes,
-                grip socks are required (available for purchase at the studio).
-                Arrive 10-15 minutes early for new member orientation.
-              </p>
-            </details>
-
-            <details class="faq-item">
-              <summary>Is there a trial period or free class?</summary>
-              <p>
-                New to ABC Fitness? Your first class is on us! Simply
-                <a href="about.html#contact">contact us</a> or stop by the
-                studio to claim your free trial class. This allows you to
-                experience our community and instruction style before committing
-                to a membership or pass.
-              </p>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-alt" id="cta">
-        <div class="container text-center">
-          <h2>Ready to Start Your Fitness Journey?</h2>
-          <p>
-            Join hundreds of members who have transformed their lives at ABC
-            Fitness Studio. Your first class is free—no strings attached.
-          </p>
-          <div class="hero-buttons" style="margin-top: 1.5rem">
-            <a href="about.html#contact" class="btn btn-primary"
-              >Claim Free Trial Class</a
-            >
-            <a href="about.html#schedule" class="btn btn-outline"
-              >View Class Schedule</a
-            >
-          </div>
-          <p style="margin-top: 2rem; color: var(--color-muted)">
-            Questions? Call us at <strong>(555) 123-4567</strong> or email
-            <strong>info@abcfitness.com</strong>
-          </p>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
+  <main>
+    <section class="page-hero">
       <div class="container">
-        <div class="footer-grid">
-          <div class="footer-section">
-            <h3>ABC Fitness</h3>
+        <h1>Memberships & Class Passes</h1>
+        <p>Flexible options to fit your lifestyle and fitness goals.</p>
+      </div>
+    </section>
+
+    <section class="section membership-intro">
+      <div class="container">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center">
+          <h2>Invest in Your Wellness</h2>
+          <p>
+            Whether you're a fitness enthusiast or just getting started, we
+            have a plan that's right for you. Our memberships offer unlimited
+            access to all classes, while class passes provide flexibility for
+            those with busy schedules.
+          </p>
+          <p>
+            <strong>Why choose a membership over drop-ins?</strong> Members
+            save up to 50% compared to drop-in rates, get priority booking,
+            access to member-only events, and discounts on equipment
+            purchases.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="plans">
+      <div class="container">
+        <h2 class="text-center">Choose Your Plan</h2>
+        <p class="text-center">
+          All plans include access to our full class schedule and studio
+          amenities.
+        </p>
+
+        <div class="membership-grid">
+          <article class="card membership-card featured">
+            <h3 class="membership-name">Monthly Unlimited</h3>
+            <p class="membership-price">$99<span>/month</span></p>
+            <ul class="membership-features">
+              <li>Unlimited classes</li>
+              <li>Priority class booking</li>
+              <li>10% equipment discount</li>
+              <li>Free guest pass per month</li>
+              <li>Access to member events</li>
+              <li>Cancel anytime</li>
+            </ul>
+            <button class="btn btn-primary btn-add-cart" data-item-id="monthly-unlimited"
+              data-name="Monthly Unlimited Membership" data-price="99" data-type="membership">
+              Add to Cart
+            </button>
+          </article>
+
+          <article class="card membership-card">
+            <h3 class="membership-name">10-Class Pass</h3>
+            <p class="membership-price">$120<span>/10 classes</span></p>
+            <ul class="membership-features">
+              <li>10 classes of your choice</li>
+              <li>Valid for 3 months</li>
+              <li>Mix and match classes</li>
+              <li>5% equipment discount</li>
+              <li>No commitment</li>
+              <li>Shareable with family</li>
+            </ul>
+            <button class="btn btn-primary btn-add-cart" data-item-id="10-class-pass" data-name="10-Class Pass"
+              data-price="120" data-type="membership">
+              Add to Cart
+            </button>
+          </article>
+
+          <article class="card membership-card">
+            <h3 class="membership-name">Weekend Warrior</h3>
+            <p class="membership-price">$59<span>/month</span></p>
+            <ul class="membership-features">
+              <li>Unlimited weekend classes</li>
+              <li>Saturday & Sunday access</li>
+              <li>5% equipment discount</li>
+              <li>Perfect for busy schedules</li>
+              <li>Cancel anytime</li>
+              <li>Great value option</li>
+            </ul>
+            <button class="btn btn-primary btn-add-cart" data-item-id="weekend-warrior"
+              data-name="Weekend Warrior Membership" data-price="59" data-type="membership">
+              Add to Cart
+            </button>
+          </article>
+
+          <article class="card membership-card">
+            <h3 class="membership-name">Student Plan</h3>
+            <p class="membership-price">$69<span>/month</span></p>
+            <ul class="membership-features">
+              <li>Unlimited classes</li>
+              <li>Valid student ID required</li>
+              <li>30% off regular price</li>
+              <li>Priority booking</li>
+              <li>5% equipment discount</li>
+              <li>Ages 16-25</li>
+            </ul>
+            <button class="btn btn-primary btn-add-cart" data-item-id="student-plan" data-name="Student Plan Membership"
+              data-price="69" data-type="membership">
+              Add to Cart
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <h2 class="text-center">Frequently Asked Questions</h2>
+        <p class="text-center">
+          Find answers to common questions about our memberships and policies.
+        </p>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How do I sign up for a membership?</summary>
             <p>
-              Your neighborhood fitness studio dedicated to building a
-              healthier, happier community through movement and wellness.
+              You can sign up online by adding your desired plan to your cart
+              and completing the checkout process. Alternatively, visit us
+              in-studio during business hours and our staff will help you get
+              started. All new members receive a complimentary orientation
+              session.
             </p>
-            <div class="social-links">
-              <a href="#" aria-label="Facebook">FB</a>
-              <a href="#" aria-label="Instagram">IG</a>
-              <a href="#" aria-label="Twitter">TW</a>
-              <a href="#" aria-label="YouTube">YT</a>
-            </div>
-          </div>
+          </details>
 
-          <div class="footer-section">
-            <h3>Quick Links</h3>
-            <a href="index.html">Home</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html">About Us</a>
-            <a href="about.html#schedule">Class Schedule</a>
-            <a href="membership.html">Membership</a>
-          </div>
+          <details class="faq-item">
+            <summary>Can I cancel my membership anytime?</summary>
+            <p>
+              Yes! All our monthly memberships are commitment-free. You can
+              cancel anytime by notifying us at least 7 days before your next
+              billing date. There are no cancellation fees or penalties. We
+              want you to stay because you love it, not because you're locked
+              in.
+            </p>
+          </details>
 
-          <div class="footer-section">
-            <h3>Contact Us</h3>
-            <p>123 Wellness Way<br />Fitness City, FC 12345</p>
-            <p>Phone: (555) 123-4567</p>
-            <p>Email: info@abcfitness.com</p>
-          </div>
+          <details class="faq-item">
+            <summary>Can I freeze my membership?</summary>
+            <p>
+              Absolutely! Life happens, and we understand. You can freeze your
+              membership for up to 3 months per year for travel, injury, or
+              other reasons. Just let us know at least 5 days before your
+              billing date. There's no fee to freeze your account.
+            </p>
+          </details>
 
-          <div class="footer-section">
-            <h3>Newsletter</h3>
-            <p>Get the latest updates and offers.</p>
-            <form class="footer-subscribe" id="subscribe-form-footer">
-              <label for="subscribe-email-footer" class="visually-hidden"
-                >Email address</label
-              >
-              <input
-                type="email"
-                id="subscribe-email-footer"
-                name="email"
-                placeholder="Your email"
-                required
-              />
-              <button type="submit" class="btn btn-primary">Go</button>
-            </form>
-            <p
-              class="subscribe-message"
-              id="subscribe-message-footer"
-              aria-live="polite"
-              style="
+          <details class="faq-item">
+            <summary>
+              What's the difference between memberships and class passes?
+            </summary>
+            <p>
+              Memberships offer unlimited access and renew monthly, making
+              them ideal for regular attendees. Class passes provide a set
+              number of classes with an expiration date, perfect for those who
+              prefer flexibility. Members also get additional perks like
+              priority booking and equipment discounts.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do class passes expire?</summary>
+            <p>
+              Yes, the 10-Class Pass is valid for 3 months from the date of
+              purchase. We recommend this option if you plan to attend at
+              least 3-4 classes per month. If you need more time, contact
+              us—we're happy to work with you on extensions for valid reasons.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I share my membership with family members?</summary>
+            <p>
+              Monthly memberships are individual and non-transferable.
+              However, the 10-Class Pass can be shared among immediate family
+              members living in the same household. Each person using the pass
+              must be registered in our system for safety reasons.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What should I bring to my first class?</summary>
+            <p>
+              Bring comfortable workout clothing, a water bottle, and a
+              positive attitude! We provide all necessary equipment including
+              yoga mats, weights, and props. For Pilates reformer classes,
+              grip socks are required (available for purchase at the studio).
+              Arrive 10-15 minutes early for new member orientation.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is there a trial period or free class?</summary>
+            <p>
+              New to ABC Fitness? Your first class is on us! Simply
+              <a href="about.html#contact">contact us</a> or stop by the
+              studio to claim your free trial class. This allows you to
+              experience our community and instruction style before committing
+              to a membership or pass.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="cta">
+      <div class="container text-center">
+        <h2>Ready to Start Your Fitness Journey?</h2>
+        <p>
+          Join hundreds of members who have transformed their lives at ABC
+          Fitness Studio. Your first class is free—no strings attached.
+        </p>
+        <div class="hero-buttons" style="margin-top: 1.5rem">
+          <a href="about.html#contact" class="btn btn-primary">Claim Free Trial Class</a>
+          <a href="about.html#schedule" class="btn btn-outline">View Class Schedule</a>
+        </div>
+        <p style="margin-top: 2rem; color: var(--color-muted)">
+          Questions? Call us at <strong>(555) 123-4567</strong> or email
+          <strong>info@abcfitness.com</strong>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h3>ABC Fitness</h3>
+          <p>
+            Your neighborhood fitness studio dedicated to building a
+            healthier, happier community through movement and wellness.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Twitter">TW</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="about.html">About Us</a>
+          <a href="about.html#schedule">Class Schedule</a>
+          <a href="membership.html">Membership</a>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>123 Wellness Way<br />Fitness City, FC 12345</p>
+          <p>Phone: (555) 123-4567</p>
+          <p>Email: info@abcfitness.com</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Newsletter</h3>
+          <p>Get the latest updates and offers.</p>
+          <form class="footer-subscribe" id="subscribe-form-footer">
+            <label for="subscribe-email-footer" class="visually-hidden">Email address</label>
+            <input type="email" id="subscribe-email-footer" name="email" placeholder="Your email" required />
+            <button type="submit" class="btn btn-primary">Go</button>
+          </form>
+          <p class="subscribe-message" id="subscribe-message-footer" aria-live="polite" style="
                 color: rgba(255, 255, 255, 0.8);
                 font-size: 0.875rem;
                 margin-top: 0.5rem;
-              "
-            ></p>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <p>&copy; 2026 ABC Fitness Studio. All rights reserved.</p>
+              "></p>
         </div>
       </div>
-    </footer>
 
-    <div class="cart-overlay" id="cart-overlay" aria-hidden="true">
-      <div class="cart-modal" role="dialog" aria-labelledby="cart-title">
-        <button class="cart-close" id="cart-close" aria-label="Close cart">
-          &times;
-        </button>
-        <h2 class="cart-title" id="cart-title">Your Cart</h2>
-        <div id="cart-content"></div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ABC Fitness Studio. All rights reserved.</p>
       </div>
     </div>
+  </footer>
 
-    <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true">
+    <div class="cart-modal" role="dialog" aria-labelledby="cart-title">
+      <button class="cart-close" id="cart-close" aria-label="Close cart">
+        &times;
+      </button>
+      <h2 class="cart-title" id="cart-title">Your Cart</h2>
+      <div id="cart-content"></div>
+    </div>
+  </div>
 
-    <div
-      class="aria-live"
-      id="aria-live"
-      aria-live="polite"
-      aria-atomic="true"
-    ></div>
+  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
 
-    <script src="/cart.js"></script>
-    <script src="/main.js"></script>
-  </body>
+  <div class="aria-live" id="aria-live" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="/cart.js"></script>
+  <script src="/main.js"></script>
+</body>
+
 </html>
