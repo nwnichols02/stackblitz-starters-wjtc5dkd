@@ -1,6 +1,7 @@
 (function () {
   const SUBSCRIBERS_KEY = 'abc_subscribers';
   const FEEDBACK_KEY = 'abc_feedback';
+  const CONTACT_SUBMISSIONS_KEY = 'abc_contact_submissions';
   const PROMO_DISMISSED_KEY = 'promoDismissed';
 
   function initMobileNav() {
@@ -177,6 +178,105 @@
     }
   }
 
+  function getContactSubmissions() {
+    try {
+      const submissions = localStorage.getItem(CONTACT_SUBMISSIONS_KEY);
+      return submissions ? JSON.parse(submissions) : [];
+    } catch (e) {
+      console.error('Error reading contact submissions:', e);
+      return [];
+    }
+  }
+
+  function saveContactSubmission(submission) {
+    try {
+      const submissions = getContactSubmissions();
+      submissions.unshift({
+        ...submission,
+        id: Date.now(),
+        submittedAt: new Date().toISOString(),
+      });
+      localStorage.setItem(CONTACT_SUBMISSIONS_KEY, JSON.stringify(submissions));
+      return true;
+    } catch (e) {
+      console.error('Error saving contact submission:', e);
+      return false;
+    }
+  }
+
+  function isValidPhone(phone) {
+    if (!phone) return true;
+    // Accepts formats: (555) 123-4567, 555-123-4567, 5551234567, +1 555 123 4567
+    const phoneRegex = /^[\+]?[(]?[0-9]{1,3}[)]?[-\s\.]?[(]?[0-9]{1,4}[)]?[-\s\.]?[0-9]{1,4}[-\s\.]?[0-9]{1,9}$/;
+    return phoneRegex.test(phone.replace(/\s/g, ''));
+  }
+
+  function showFieldError(input, message) {
+    input.classList.add('error');
+    const existingError = input.parentNode.querySelector('.form-error');
+    if (existingError) {
+      existingError.remove();
+    }
+    const errorEl = document.createElement('p');
+    errorEl.className = 'form-error';
+    errorEl.textContent = message;
+    input.parentNode.appendChild(errorEl);
+  }
+
+  function clearFieldError(input) {
+    input.classList.remove('error');
+    const existingError = input.parentNode.querySelector('.form-error');
+    if (existingError) {
+      existingError.remove();
+    }
+  }
+
+  function clearAllFormErrors(form) {
+    form.querySelectorAll('.error').forEach((el) => el.classList.remove('error'));
+    form.querySelectorAll('.form-error').forEach((el) => el.remove());
+  }
+
+  function validateContactForm(formData) {
+    const errors = [];
+    const name = formData.get('name')?.trim() || '';
+    const email = formData.get('email')?.trim() || '';
+    const phone = formData.get('phone')?.trim() || '';
+    const subject = formData.get('subject')?.trim() || '';
+    const message = formData.get('message')?.trim() || '';
+
+    if (!name) {
+      errors.push({ field: 'contact-name', message: 'Name is required.' });
+    } else if (name.length < 2) {
+      errors.push({ field: 'contact-name', message: 'Name must be at least 2 characters.' });
+    } else if (name.length > 100) {
+      errors.push({ field: 'contact-name', message: 'Name must be less than 100 characters.' });
+    }
+
+    if (!email) {
+      errors.push({ field: 'contact-email', message: 'Email is required.' });
+    } else if (!isValidEmail(email)) {
+      errors.push({ field: 'contact-email', message: 'Please enter a valid email address.' });
+    }
+
+    if (phone && !isValidPhone(phone)) {
+      errors.push({ field: 'contact-phone', message: 'Please enter a valid phone number.' });
+    }
+
+    if (!subject) {
+      errors.push({ field: 'contact-subject', message: 'Please select a subject.' });
+    }
+
+    if (!message) {
+      errors.push({ field: 'contact-message', message: 'Message is required.' });
+    } else if (message.length < 10) {
+      errors.push({ field: 'contact-message', message: 'Message must be at least 10 characters.' });
+    } else if (message.length > 2000) {
+      errors.push({ field: 'contact-message', message: 'Message must be less than 2000 characters.' });
+    }
+
+    return errors;
+  }
+
   function initContactForm() {
     const contactForm = document.getElementById('contact-form');
     const customOrderCheckbox = document.getElementById('custom-order');
@@ -192,27 +292,85 @@
       });
     }
 
+    const inputs = contactForm.querySelectorAll('input, textarea, select');
+    inputs.forEach((input) => {
+      input.addEventListener('blur', () => {
+        const formData = new FormData(contactForm);
+        const errors = validateContactForm(formData);
+        const fieldError = errors.find((err) => err.field === input.id);
+
+        if (fieldError) {
+          showFieldError(input, fieldError.message);
+        } else {
+          clearFieldError(input);
+        }
+      });
+
+      input.addEventListener('input', () => {
+        clearFieldError(input);
+      });
+    });
+
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
+      clearAllFormErrors(contactForm);
+
       const formData = new FormData(contactForm);
-      const data = Object.fromEntries(formData.entries());
+
+      const errors = validateContactForm(formData);
+
+      if (errors.length > 0) {
+        errors.forEach((error) => {
+          const input = document.getElementById(error.field);
+          if (input) {
+            showFieldError(input, error.message);
+          }
+        });
+
+        const firstErrorField = document.getElementById(errors[0].field);
+        if (firstErrorField) {
+          firstErrorField.focus();
+        }
+
+        showToast('Please fix the errors in the form.', 'error');
+        return;
+      }
+
+      const data = {
+        name: formData.get('name').trim(),
+        email: formData.get('email').trim(),
+        phone: formData.get('phone')?.trim() || '',
+        subject: formData.get('subject').trim(),
+        message: formData.get('message').trim(),
+        customOrder: formData.get('customOrder') === 'on',
+        equipmentType: formData.get('equipmentType')?.trim() || '',
+        equipmentBudget: formData.get('equipmentBudget')?.trim() || '',
+      };
 
       console.log('Contact form submitted:', data);
 
-      const messageEl = document.getElementById('contact-form-message');
-      if (messageEl) {
-        messageEl.textContent =
-          "Thank you for your message! We'll get back to you within 24-48 hours.";
-        messageEl.style.display = 'block';
-      }
+      if (saveContactSubmission(data)) {
+        const messageEl = document.getElementById('contact-form-message');
+        if (messageEl) {
+          messageEl.textContent =
+            "Thank you for your message! We'll get back to you within 24-48 hours.";
+          messageEl.style.display = 'block';
 
-      contactForm.reset();
-      if (customOrderFields) {
-        customOrderFields.style.display = 'none';
-      }
+          setTimeout(() => {
+            messageEl.style.display = 'none';
+          }, 10000);
+        }
 
-      showToast('Message sent successfully!', 'success');
+        contactForm.reset();
+        if (customOrderFields) {
+          customOrderFields.style.display = 'none';
+        }
+
+        showToast('Message sent successfully!', 'success');
+      } else {
+        showToast('Error saving your message. Please try again.', 'error');
+      }
     });
   }
 
@@ -270,9 +428,8 @@
         <article class="feedback-item">
           <div class="feedback-header">
             <span class="feedback-author">${escapeHtml(item.name)}</span>
-            <span class="feedback-rating" aria-label="${
-              item.rating
-            } out of 5 stars">${stars}</span>
+            <span class="feedback-rating" aria-label="${item.rating
+        } out of 5 stars">${stars}</span>
           </div>
           <p class="feedback-comment">${escapeHtml(item.comment)}</p>
         </article>
