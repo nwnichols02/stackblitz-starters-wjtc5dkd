@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore ABC Fitness Studio's gallery featuring our classes, studio spaces, and quality fitness equipment."
+    />
+    <title>Gallery - ABC Fitness Studio</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <a href="index.html" class="logo">
+          <span class="logo-accent">ABC</span>
+          <span class="logo-text">Fitness Studio</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="nav-toggle-icon"></span>
+        </button>
+
+        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li>
+              <a href="gallery.html" class="nav-link nav-link--active"
+                >Gallery</a
+              >
+            </li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="membership.html" class="nav-link">Membership</a></li>
+            <li>
+              <button
+                class="btn-cart"
+                id="open-cart"
+                aria-label="View shopping cart"
+              >
+                View Cart <span class="cart-badge" id="cart-badge">0</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <h1>Studio & Classes Gallery</h1>
+          <p>
+            Take a virtual tour of our welcoming spaces and vibrant class
+            atmosphere.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="text-center">Our Spaces & Classes</h2>
+          <p class="text-center">
+            Experience the energy and warmth of ABC Fitness Studio through our
+            gallery.
+          </p>
+
+          <div class="gallery-grid">
+            <figure class="gallery-item">
+              <img
+                src="assets/Client2_GroupYoga-8e77f3ec-d6ad-4543-815f-fc454f8f8cbc.png"
+                alt="Large group fitness class with participants stretching on yoga mats"
+              />
+              <figcaption>Group Yoga Class</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+              <img
+                src="assets/Client2_GroupPilates-78c01e41-b726-40fb-9828-98aad132b688.png"
+                alt="Women in a group Pilates class doing leg exercises on pink yoga mats"
+              />
+              <figcaption>Group Pilates Session</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+              <img
+                src="assets/Client2_GroupKickboxing-98242e82-cb3a-466e-bae9-786d55806d78.png"
+                alt="Two women with boxing gloves smiling during a kickboxing class"
+              />
+              <figcaption>Kickboxing Class</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+              <img
+                src="assets/Client2_IndividualYoga-3975606e-ac02-4e50-9280-b7f18d52868d.png"
+                alt="Woman performing a downward dog yoga pose on a teal mat"
+              />
+              <figcaption>Individual Yoga Practice</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+              <img
+                src="assets/Client2_IndividualPilates-5471a7cd-22ce-49dc-817b-30fd4111c800.png"
+                alt="Woman doing a back extension exercise with dumbbells nearby"
+              />
+              <figcaption>Core Strength Training</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+              <img
+                src="assets/Client2_IndividualKickboxing-b6c87ba0-faba-4fe0-ae59-9250a02228cd.png"
+                alt="Woman practicing a high kick on a punching bag with trainer supervision"
+              />
+              <figcaption>Personal Kickboxing Training</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <h2 class="text-center">Equipment Highlights</h2>
+          <p class="text-center">
+            Quality fitness equipment available for in-studio use and home
+            purchase.
+          </p>
+
+          <div class="card-grid">
+            <article class="card">
+              <img
+                src="assets/Client2_YogaMat-67581f87-4fec-492a-8b1b-4e921feabd6d.png"
+                alt="Black yoga mat with ABC Fitness dumbbell logo"
+                class="card-image product"
+              />
+              <h3 class="card-title">Premium Yoga Mat</h3>
+              <p class="card-text">
+                Extra thick 6mm eco-friendly mat with superior grip. Perfect for
+                yoga, Pilates, and stretching. Features our signature ABC
+                Fitness logo.
+              </p>
+              <p class="card-meta">72" x 26" | Non-slip surface</p>
+              <p class="card-price">$65</p>
+              <button
+                class="btn btn-primary btn-add-cart"
+                data-item-id="yoga-mat"
+                data-name="Premium Yoga Mat"
+                data-price="65"
+                data-type="equipment"
+              >
+                Add to Cart
+              </button>
+            </article>
+
+            <article class="card">
+              <img
+                src="assets.js/yogaMat"
+                alt="Black insulated water bottle with ABC Fitness dumbbell logo"
+                class="card-image product"
+              />
+              <h3 class="card-title">ABC Fitness Water Bottle</h3>
+              <p class="card-text">
+                Stay hydrated in style with our double-walled insulated
+                stainless steel bottle. Keeps drinks cold for 24 hours or hot
+                for 12 hours.
+              </p>
+              <p class="card-meta">25 oz | BPA-free</p>
+              <p class="card-price">$28</p>
+              <button
+                class="btn btn-primary btn-add-cart"
+                data-item-id="water-bottle"
+                data-name="ABC Fitness Water Bottle"
+                data-price="28"
+                data-type="equipment"
+              >
+                Add to Cart
+              </button>
+            </article>
+
+            <article class="card">
+              <img
+                src="assets/Client2_TeeShirt-e19a25cc-8ad2-453c-9a55-19cc2a4932cd.png"
+                alt="Dark gray t-shirt with ABC Fitness dumbbell logo"
+                class="card-image product"
+              />
+              <h3 class="card-title">ABC Fitness T-Shirt</h3>
+              <p class="card-text">
+                Comfortable moisture-wicking workout tee with our signature
+                logo. Perfect for classes or everyday wear. Available in
+                multiple sizes.
+              </p>
+              <p class="card-meta">Sizes S-XXL | Machine washable</p>
+              <p class="card-price">$32</p>
+              <button
+                class="btn btn-primary btn-add-cart"
+                data-item-id="abc-tshirt"
+                data-name="ABC Fitness T-Shirt"
+                data-price="32"
+                data-type="equipment"
+              >
+                Add to Cart
+              </button>
+            </article>
+          </div>
+
+          <p class="text-center" style="margin-top: 2rem">
+            Looking for custom equipment orders?
+            <a href="about.html#contact">Contact us</a> for bulk pricing and
+            special requests.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container text-center">
+          <h2>Ready to Experience ABC Fitness?</h2>
+          <p>Join our community and start your wellness journey today.</p>
+          <div class="hero-buttons" style="margin-top: 1.5rem">
+            <a href="membership.html" class="btn btn-primary"
+              >View Memberships</a
+            >
+            <a href="about.html#schedule" class="btn btn-outline"
+              >See Class Schedule</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h3>ABC Fitness</h3>
+            <p>
+              Your neighborhood fitness studio dedicated to building a
+              healthier, happier community through movement and wellness.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">FB</a>
+              <a href="#" aria-label="Instagram">IG</a>
+              <a href="#" aria-label="Twitter">TW</a>
+              <a href="#" aria-label="YouTube">YT</a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About Us</a>
+            <a href="about.html#schedule">Class Schedule</a>
+            <a href="membership.html">Membership</a>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>123 Wellness Way<br />Fitness City, FC 12345</p>
+            <p>Phone: (555) 123-4567</p>
+            <p>Email: info@abcfitness.com</p>
+          </div>
+
+          <div class="footer-section">
+            <h3>Newsletter</h3>
+            <p>Get the latest updates and offers.</p>
+            <form class="footer-subscribe" id="subscribe-form-footer">
+              <label for="subscribe-email-footer" class="visually-hidden"
+                >Email address</label
+              >
+              <input
+                type="email"
+                id="subscribe-email-footer"
+                name="email"
+                placeholder="Your email"
+                required
+              />
+              <button type="submit" class="btn btn-primary">Go</button>
+            </form>
+            <p
+              class="subscribe-message"
+              id="subscribe-message-footer"
+              aria-live="polite"
+              style="
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 0.875rem;
+                margin-top: 0.5rem;
+              "
+            ></p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 ABC Fitness Studio. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="cart-overlay" id="cart-overlay" aria-hidden="true">
+      <div class="cart-modal" role="dialog" aria-labelledby="cart-title">
+        <button class="cart-close" id="cart-close" aria-label="Close cart">
+          &times;
+        </button>
+        <h2 class="cart-title" id="cart-title">Your Cart</h2>
+        <div id="cart-content"></div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+    <div
+      class="aria-live"
+      id="aria-live"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+
+    <script src="/cart.js"></script>
+    <script src="/main.js"></script>
+  </body>
+</html>

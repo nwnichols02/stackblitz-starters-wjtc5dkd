@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn about ABC Fitness Studio, meet our instructors, view class schedules, and contact us for inquiries or custom equipment orders."
+    />
+    <title>About Us - ABC Fitness Studio</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <a href="index.html" class="logo">
+          <span class="logo-accent">ABC</span>
+          <span class="logo-text">Fitness Studio</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="nav-toggle-icon"></span>
+        </button>
+
+        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li>
+              <a href="about.html" class="nav-link nav-link--active">About</a>
+            </li>
+            <li><a href="membership.html" class="nav-link">Membership</a></li>
+            <li>
+              <button
+                class="btn-cart"
+                id="open-cart"
+                aria-label="View shopping cart"
+              >
+                View Cart <span class="cart-badge" id="cart-badge">0</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <h1>About ABC Fitness Studio</h1>
+          <p>
+            Empowering our community through movement, wellness, and connection
+            since 2018.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div style="max-width: 800px; margin: 0 auto">
+            <h2>Our Story</h2>
+            <p>
+              ABC Fitness Studio was founded with a simple mission: to create a
+              welcoming space where everyone, regardless of fitness level, can
+              discover the joy of movement and build a healthier lifestyle.
+            </p>
+
+            <p>
+              What started as a small yoga studio in 2018 has grown into a
+              comprehensive fitness center offering diverse group classes, from
+              energizing Zumba sessions to restorative yoga practices. Our
+              growth has been driven by our dedicated community of members who
+              inspire us every day.
+            </p>
+
+            <p>
+              We believe fitness should be accessible, enjoyable, and
+              community-focused. That's why we've maintained our commitment to
+              small class sizes, personalized attention, and creating genuine
+              connections among our members. When you join ABC Fitness, you're
+              not just joining a gym—you're becoming part of a family.
+            </p>
+
+            <h3 style="margin-top: 2rem">Our Mission</h3>
+            <p>
+              To inspire and support individuals of all ages and abilities in
+              achieving their wellness goals through high-quality group fitness
+              experiences, expert instruction, and a nurturing community
+              environment.
+            </p>
+
+            <h3 style="margin-top: 2rem">Who We Serve</h3>
+            <p>
+              Our diverse community includes busy professionals seeking stress
+              relief, parents looking for quality "me time," seniors maintaining
+              mobility, fitness enthusiasts challenging themselves, and
+              beginners taking their first steps toward better health. Everyone
+              is welcome at ABC Fitness.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="instructors">
+        <div class="container">
+          <h2 class="text-center">Meet Our Instructors</h2>
+          <p class="text-center">
+            Certified professionals dedicated to your success.
+          </p>
+
+          <div class="instructor-grid">
+            <article class="card instructor-card">
+              <div class="instructor-avatar" aria-hidden="true">&#129506;</div>
+              <h3 class="instructor-name">Maria Santos</h3>
+              <p class="instructor-specialty">Yoga & Pilates</p>
+              <p class="instructor-bio">
+                15+ years experience. RYT-500 certified. Specializes in
+                alignment-based yoga and therapeutic Pilates for injury
+                recovery.
+              </p>
+            </article>
+
+            <article class="card instructor-card">
+              <div class="instructor-avatar" aria-hidden="true">&#128170;</div>
+              <h3 class="instructor-name">David Chen</h3>
+              <p class="instructor-specialty">HIIT & Strength</p>
+              <p class="instructor-bio">
+                Former collegiate athlete. NASM certified personal trainer.
+                Known for motivating high-energy workouts that get results.
+              </p>
+            </article>
+
+            <article class="card instructor-card">
+              <div class="instructor-avatar" aria-hidden="true">&#128131;</div>
+              <h3 class="instructor-name">Sofia Rodriguez</h3>
+              <p class="instructor-specialty">Zumba & Dance</p>
+              <p class="instructor-bio">
+                Licensed Zumba instructor since 2015. Brings authentic Latin
+                dance energy and creates an inclusive, judgment-free atmosphere.
+              </p>
+            </article>
+
+            <article class="card instructor-card">
+              <div class="instructor-avatar" aria-hidden="true">&#129496;</div>
+              <h3 class="instructor-name">James Wilson</h3>
+              <p class="instructor-specialty">Pilates & Core</p>
+              <p class="instructor-bio">
+                Balanced Body certified. Former dancer with expertise in core
+                conditioning and postural alignment techniques.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="schedule">
+        <div class="container">
+          <h2 class="text-center">Class Schedule & Pricing</h2>
+          <p class="text-center">
+            Find the perfect class to fit your schedule and goals.
+          </p>
+
+          <div class="table-responsive">
+            <table>
+              <caption>
+                Weekly class schedule with pricing for drop-in attendance
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Class</th>
+                  <th scope="col">Day</th>
+                  <th scope="col">Time</th>
+                  <th scope="col">Level</th>
+                  <th scope="col">Drop-in Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Morning Yoga</td>
+                  <td>Mon, Wed, Fri</td>
+                  <td>7:00 AM</td>
+                  <td>Beginner</td>
+                  <td>$15</td>
+                </tr>
+                <tr>
+                  <td>Power Pilates</td>
+                  <td>Tue, Thu</td>
+                  <td>6:00 PM</td>
+                  <td>Intermediate</td>
+                  <td>$18</td>
+                </tr>
+                <tr>
+                  <td>Zumba Energy</td>
+                  <td>Saturday</td>
+                  <td>10:00 AM</td>
+                  <td>All Levels</td>
+                  <td>$15</td>
+                </tr>
+                <tr>
+                  <td>HIIT Circuit</td>
+                  <td>Mon, Wed, Fri</td>
+                  <td>5:30 PM</td>
+                  <td>Advanced</td>
+                  <td>$20</td>
+                </tr>
+                <tr>
+                  <td>Gentle Yoga</td>
+                  <td>Tue, Thu</td>
+                  <td>10:00 AM</td>
+                  <td>Beginner</td>
+                  <td>$12</td>
+                </tr>
+                <tr>
+                  <td>Core & More</td>
+                  <td>Mon, Wed</td>
+                  <td>12:00 PM</td>
+                  <td>Intermediate</td>
+                  <td>$15</td>
+                </tr>
+                <tr>
+                  <td>Dance Cardio</td>
+                  <td>Friday</td>
+                  <td>6:30 PM</td>
+                  <td>All Levels</td>
+                  <td>$15</td>
+                </tr>
+                <tr>
+                  <td>Sunday Stretch</td>
+                  <td>Sunday</td>
+                  <td>9:00 AM</td>
+                  <td>All Levels</td>
+                  <td>$10</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="text-center" style="margin-top: 1.5rem">
+            Save money with our
+            <a href="membership.html">membership plans</a>—unlimited classes
+            starting at $99/month!
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="contact">
+        <div class="container">
+          <h2 class="text-center">Contact & Custom Equipment Orders</h2>
+          <p class="text-center">
+            Have questions? Want to place a custom equipment order? We're here
+            to help.
+          </p>
+
+          <div class="contact-info">
+            <div class="contact-item">
+              <h3>Address</h3>
+              <p>123 Wellness Way<br />Fitness City, FC 12345</p>
+            </div>
+            <div class="contact-item">
+              <h3>Phone</h3>
+              <p>(555) 123-4567</p>
+            </div>
+            <div class="contact-item">
+              <h3>Email</h3>
+              <p>info@abcfitness.com</p>
+            </div>
+            <div class="contact-item">
+              <h3>Hours</h3>
+              <p>Mon-Fri: 6 AM - 9 PM<br />Sat-Sun: 7 AM - 6 PM</p>
+            </div>
+          </div>
+
+          <div style="max-width: 600px; margin: 2rem auto 0">
+            <h3>Send Us a Message</h3>
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="contact-name" class="form-label"
+                  >Name <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  class="form-input"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label"
+                  >Email <span class="required">*</span></label
+                >
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  class="form-input"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-phone" class="form-label"
+                  >Phone (optional)</label
+                >
+                <input
+                  type="tel"
+                  id="contact-phone"
+                  name="phone"
+                  class="form-input"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label"
+                  >Subject <span class="required">*</span></label
+                >
+                <select
+                  id="contact-subject"
+                  name="subject"
+                  class="form-select"
+                  required
+                >
+                  <option value="">Select a subject...</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="classes">Class Information</option>
+                  <option value="membership">Membership Questions</option>
+                  <option value="equipment">Custom Equipment Order</option>
+                  <option value="feedback">Feedback</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label"
+                  >Message <span class="required">*</span></label
+                >
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  class="form-textarea"
+                  required
+                  placeholder="How can we help you?"
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="form-checkbox">
+                  <input type="checkbox" id="custom-order" name="customOrder" />
+                  <span>I'm interested in a custom equipment order</span>
+                </label>
+              </div>
+
+              <div id="custom-order-fields" style="display: none">
+                <div class="form-group">
+                  <label for="equipment-type" class="form-label"
+                    >Equipment Type</label
+                  >
+                  <input
+                    type="text"
+                    id="equipment-type"
+                    name="equipmentType"
+                    class="form-input"
+                    placeholder="e.g., Commercial treadmill, bulk yoga mats"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="equipment-budget" class="form-label"
+                    >Budget Range</label
+                  >
+                  <select
+                    id="equipment-budget"
+                    name="equipmentBudget"
+                    class="form-select"
+                  >
+                    <option value="">Select budget range...</option>
+                    <option value="under-500">Under $500</option>
+                    <option value="500-1000">$500 - $1,000</option>
+                    <option value="1000-5000">$1,000 - $5,000</option>
+                    <option value="5000-plus">$5,000+</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+              <p
+                id="contact-form-message"
+                class="form-success"
+                style="display: none"
+                aria-live="polite"
+              ></p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="feedback">
+        <div class="container">
+          <h2 class="text-center">Customer Feedback</h2>
+          <p class="text-center">
+            We value your input! Share your experience with ABC Fitness Studio.
+          </p>
+
+          <div style="max-width: 600px; margin: 2rem auto 0">
+            <h3>Submit Your Feedback</h3>
+            <form id="feedback-form">
+              <div class="form-group">
+                <label for="feedback-name" class="form-label"
+                  >Your Name <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="feedback-name"
+                  name="name"
+                  class="form-input"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label"
+                  >Rating <span class="required">*</span></label
+                >
+                <div class="rating-group">
+                  <label class="rating-option">
+                    <input type="radio" name="rating" value="5" required />
+                    <span>5 - Excellent</span>
+                  </label>
+                  <label class="rating-option">
+                    <input type="radio" name="rating" value="4" />
+                    <span>4 - Good</span>
+                  </label>
+                  <label class="rating-option">
+                    <input type="radio" name="rating" value="3" />
+                    <span>3 - Average</span>
+                  </label>
+                  <label class="rating-option">
+                    <input type="radio" name="rating" value="2" />
+                    <span>2 - Fair</span>
+                  </label>
+                  <label class="rating-option">
+                    <input type="radio" name="rating" value="1" />
+                    <span>1 - Poor</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="feedback-comment" class="form-label"
+                  >Comments <span class="required">*</span></label
+                >
+                <textarea
+                  id="feedback-comment"
+                  name="comment"
+                  class="form-textarea"
+                  required
+                  placeholder="Tell us about your experience..."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                Submit Feedback
+              </button>
+              <p
+                id="feedback-form-message"
+                class="form-success"
+                style="display: none"
+                aria-live="polite"
+              ></p>
+            </form>
+          </div>
+
+          <div style="max-width: 800px; margin: 3rem auto 0">
+            <h3>Recent Feedback</h3>
+            <div id="feedback-list" class="feedback-list">
+              <p
+                id="no-feedback-message"
+                style="color: var(--color-muted); text-align: center"
+              >
+                No feedback submitted yet. Be the first to share your
+                experience!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h3>ABC Fitness</h3>
+            <p>
+              Your neighborhood fitness studio dedicated to building a
+              healthier, happier community through movement and wellness.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">FB</a>
+              <a href="#" aria-label="Instagram">IG</a>
+              <a href="#" aria-label="Twitter">TW</a>
+              <a href="#" aria-label="YouTube">YT</a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About Us</a>
+            <a href="about.html#schedule">Class Schedule</a>
+            <a href="membership.html">Membership</a>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>123 Wellness Way<br />Fitness City, FC 12345</p>
+            <p>Phone: (555) 123-4567</p>
+            <p>Email: info@abcfitness.com</p>
+          </div>
+
+          <div class="footer-section">
+            <h3>Newsletter</h3>
+            <p>Get the latest updates and offers.</p>
+            <form class="footer-subscribe" id="subscribe-form-footer">
+              <label for="subscribe-email-footer" class="visually-hidden"
+                >Email address</label
+              >
+              <input
+                type="email"
+                id="subscribe-email-footer"
+                name="email"
+                placeholder="Your email"
+                required
+              />
+              <button type="submit" class="btn btn-primary">Go</button>
+            </form>
+            <p
+              class="subscribe-message"
+              id="subscribe-message-footer"
+              aria-live="polite"
+              style="
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 0.875rem;
+                margin-top: 0.5rem;
+              "
+            ></p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 ABC Fitness Studio. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="cart-overlay" id="cart-overlay" aria-hidden="true">
+      <div class="cart-modal" role="dialog" aria-labelledby="cart-title">
+        <button class="cart-close" id="cart-close" aria-label="Close cart">
+          &times;
+        </button>
+        <h2 class="cart-title" id="cart-title">Your Cart</h2>
+        <div id="cart-content"></div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+    <div
+      class="aria-live"
+      id="aria-live"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+
+    <script src="/cart.js"></script>
+    <script src="/main.js"></script>
+  </body>
+</html>

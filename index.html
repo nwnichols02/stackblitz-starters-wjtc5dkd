@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ABC Fitness Studio - Group fitness classes including yoga, Pilates, and Zumba. Join our community and start your wellness journey today."
+    />
+    <title>ABC Fitness Studio - Move. Grow. Thrive.</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="promo-banner" id="promo-banner">
+      <p>
+        New member special: Try our
+        <a href="membership.html">10-Class Pass</a> for just $99!
+      </p>
+      <button
+        class="promo-dismiss"
+        id="promo-dismiss"
+        aria-label="Dismiss promotion"
+      >
+        &times;
+      </button>
+    </div>
+
+    <header class="header">
+      <div class="header-container">
+        <a href="index.html" class="logo">
+          <span class="logo-accent">ABC</span>
+          <span class="logo-text">Fitness Studio</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="nav-toggle-icon"></span>
+        </button>
+
+        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li>
+              <a href="index.html" class="nav-link nav-link--active">Home</a>
+            </li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="membership.html" class="nav-link">Membership</a></li>
+            <li>
+              <button
+                class="btn-cart"
+                id="open-cart"
+                aria-label="View shopping cart"
+              >
+                View Cart <span class="cart-badge" id="cart-badge">0</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Move. Grow. Thrive at ABC Fitness Studio.</h1>
+          <p>
+            Join our welcoming community and discover a healthier, happier you
+            through diverse group fitness classes and personalized wellness
+            support.
+          </p>
+          <div class="hero-buttons">
+            <a href="about.html#schedule" class="btn btn-primary"
+              >View Class Schedule</a
+            >
+            <a href="membership.html" class="btn btn-outline"
+              >Join Membership</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="text-center">Featured Classes</h2>
+          <p class="text-center">
+            Discover our most popular classes designed for all fitness levels.
+          </p>
+
+          <div class="card-grid">
+            <article class="card">
+              <img
+                src="assets/Client2_IndividualYoga-3975606e-ac02-4e50-9280-b7f18d52868d.png"
+                alt="Woman performing a yoga pose on a mat"
+                class="card-image"
+              />
+              <h3 class="card-title">Morning Yoga</h3>
+              <p class="card-text">
+                Start your day with gentle stretches and mindful breathing.
+                Perfect for beginners and experienced yogis alike.
+              </p>
+              <p class="card-meta">
+                60 min | Beginner-Friendly | Mon, Wed, Fri 7:00 AM
+              </p>
+              <p class="card-price">$15</p>
+              <button
+                class="btn btn-primary btn-add-cart"
+                data-item-id="morning-yoga"
+                data-name="Morning Yoga (Drop-in)"
+                data-price="15"
+                data-type="class"
+              >
+                Add to Cart
+              </button>
+            </article>
+
+            <article class="card">
+              <img
+                src="assets/Client2_GroupPilates-78c01e41-b726-40fb-9828-98aad132b688.png"
+                alt="Group of women doing Pilates exercises on mats"
+                class="card-image"
+              />
+              <h3 class="card-title">Power Pilates</h3>
+              <p class="card-text">
+                Build core strength and improve flexibility with our dynamic
+                Pilates sessions. Equipment provided.
+              </p>
+              <p class="card-meta">45 min | Intermediate | Tue, Thu 6:00 PM</p>
+              <p class="card-price">$18</p>
+              <button
+                class="btn btn-primary btn-add-cart"
+                data-item-id="power-pilates"
+                data-name="Power Pilates (Drop-in)"
+                data-price="18"
+                data-type="class"
+              >
+                Add to Cart
+              </button>
+            </article>
+
+            <article class="card">
+              <img
+                src="assets/Client2_GroupKickboxing-98242e82-cb3a-466e-bae9-786d55806d78.png"
+                alt="Two women with boxing gloves smiling during kickboxing class"
+                class="card-image"
+              />
+              <h3 class="card-title">Cardio Kickboxing</h3>
+              <p class="card-text">
+                High-energy cardio workout combining martial arts techniques
+                with fast-paced cardio. Great stress reliever!
+              </p>
+              <p class="card-meta">45 min | All Levels | Sat 10:00 AM</p>
+              <p class="card-price">$15</p>
+              <button
+                class="btn btn-primary btn-add-cart"
+                data-item-id="cardio-kickboxing"
+                data-name="Cardio Kickboxing (Drop-in)"
+                data-price="15"
+                data-type="class"
+              >
+                Add to Cart
+              </button>
+            </article>
+
+            <article class="card">
+              <img
+                src="assets/Client2_IndividualPilates-5471a7cd-22ce-49dc-817b-30fd4111c800.png"
+                alt="Woman doing a back extension core exercise"
+                class="card-image"
+              />
+              <h3 class="card-title">Core & Strength</h3>
+              <p class="card-text">
+                Maximize results with targeted core and strength training. Push
+                your limits and see results fast.
+              </p>
+              <p class="card-meta">
+                30 min | Intermediate | Mon, Wed, Fri 5:30 PM
+              </p>
+              <p class="card-price">$20</p>
+              <button
+                class="btn btn-primary btn-add-cart"
+                data-item-id="core-strength"
+                data-name="Core & Strength (Drop-in)"
+                data-price="20"
+                data-type="class"
+              >
+                Add to Cart
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <h2 class="text-center">Why Train with Us</h2>
+          <p class="text-center">
+            Experience the ABC Fitness difference with our commitment to your
+            wellness journey.
+          </p>
+
+          <div class="benefits-list">
+            <div class="benefit-item">
+              <div class="benefit-icon" aria-hidden="true">&#128101;</div>
+              <div class="benefit-content">
+                <h3>Small Class Sizes</h3>
+                <p>
+                  Maximum 15 participants per class ensures personalized
+                  attention and proper form guidance from our instructors.
+                </p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon" aria-hidden="true">&#127942;</div>
+              <div class="benefit-content">
+                <h3>Certified Instructors</h3>
+                <p>
+                  All our instructors hold nationally recognized certifications
+                  and undergo continuous training.
+                </p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon" aria-hidden="true">&#128197;</div>
+              <div class="benefit-content">
+                <h3>Flexible Memberships</h3>
+                <p>
+                  From drop-in classes to unlimited monthly passes, find a plan
+                  that fits your schedule and budget.
+                </p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon" aria-hidden="true">&#127947;</div>
+              <div class="benefit-content">
+                <h3>Quality Equipment</h3>
+                <p>
+                  Train with premium fitness equipment. Plus, shop our curated
+                  selection for home workouts.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="text-center">Member Stories</h2>
+          <p class="text-center">
+            Hear from our community members about their fitness journey with us.
+          </p>
+
+          <div class="testimonials-grid">
+            <blockquote class="testimonial">
+              <p class="testimonial-text">
+                I've tried many gyms, but ABC Fitness Studio feels like home.
+                The instructors know my name, and the morning yoga classes have
+                completely transformed my energy levels throughout the day.
+              </p>
+              <cite class="testimonial-author"
+                >— Sarah M., Member since 2024</cite
+              >
+            </blockquote>
+
+            <blockquote class="testimonial">
+              <p class="testimonial-text">
+                The Zumba classes are incredible! I never thought I'd enjoy
+                working out, but now I look forward to every Saturday. I've lost
+                20 pounds and gained so much confidence.
+              </p>
+              <cite class="testimonial-author"
+                >— James L., Member since 2023</cite
+              >
+            </blockquote>
+
+            <blockquote class="testimonial">
+              <p class="testimonial-text">
+                As someone new to fitness, I was nervous about joining. The
+                staff made me feel welcome from day one, and the class variety
+                keeps me engaged week after week.
+              </p>
+              <cite class="testimonial-author"
+                >— Michelle K., Member since 2025</cite
+              >
+            </blockquote>
+          </div>
+
+          <p class="text-center" style="margin-top: 2rem">
+            <a href="about.html#feedback" class="btn btn-outline"
+              >Share Your Feedback</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <section class="subscribe-strip">
+        <div class="container">
+          <h2>Stay Connected</h2>
+          <p>
+            Subscribe to our newsletter for class updates, wellness tips, and
+            exclusive member offers.
+          </p>
+          <form class="subscribe-form" id="subscribe-form-main">
+            <label for="subscribe-email-main" class="visually-hidden"
+              >Email address</label
+            >
+            <input
+              type="email"
+              id="subscribe-email-main"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+          <p
+            class="subscribe-message"
+            id="subscribe-message-main"
+            aria-live="polite"
+          ></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h3>ABC Fitness</h3>
+            <p>
+              Your neighborhood fitness studio dedicated to building a
+              healthier, happier community through movement and wellness.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">FB</a>
+              <a href="#" aria-label="Instagram">IG</a>
+              <a href="#" aria-label="Twitter">TW</a>
+              <a href="#" aria-label="YouTube">YT</a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About Us</a>
+            <a href="about.html#schedule">Class Schedule</a>
+            <a href="membership.html">Membership</a>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>123 Wellness Way<br />Fitness City, FC 12345</p>
+            <p>Phone: (555) 123-4567</p>
+            <p>Email: info@abcfitness.com</p>
+          </div>
+
+          <div class="footer-section">
+            <h3>Newsletter</h3>
+            <p>Get the latest updates and offers.</p>
+            <form class="footer-subscribe" id="subscribe-form-footer">
+              <label for="subscribe-email-footer" class="visually-hidden"
+                >Email address</label
+              >
+              <input
+                type="email"
+                id="subscribe-email-footer"
+                name="email"
+                placeholder="Your email"
+                required
+              />
+              <button type="submit" class="btn btn-primary">Go</button>
+            </form>
+            <p
+              class="subscribe-message"
+              id="subscribe-message-footer"
+              aria-live="polite"
+              style="
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 0.875rem;
+                margin-top: 0.5rem;
+              "
+            ></p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 ABC Fitness Studio. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="cart-overlay" id="cart-overlay" aria-hidden="true">
+      <div class="cart-modal" role="dialog" aria-labelledby="cart-title">
+        <button class="cart-close" id="cart-close" aria-label="Close cart">
+          &times;
+        </button>
+        <h2 class="cart-title" id="cart-title">Your Cart</h2>
+        <div id="cart-content"></div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+    <div
+      class="aria-live"
+      id="aria-live"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+
+    <script src="/cart.js"></script>
+    <script src="/main.js"></script>
+  </body>
+</html>
